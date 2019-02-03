@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_regular">10dp</dimen>
+    <dimen name="textSize_header">30sp</dimen>
+    <dimen name="textSize_button">24sp</dimen>
+    <dimen name="button_margin">25dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="text_listItem">24sp</dimen>
+</resources>
