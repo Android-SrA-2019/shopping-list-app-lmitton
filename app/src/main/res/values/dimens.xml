@@ -6,4 +6,8 @@
     <dimen name="button_margin">25dp</dimen>
     <dimen name="button_width">150dp</dimen>
     <dimen name="text_listItem">24sp</dimen>
+    <dimen name="button_margin_land">20</dimen>
+    <dimen name="textSize_header_tablet">60sp</dimen>
+    <dimen name="textSize_button_tablet">48sp</dimen>
+    <dimen name="button_width_tablet">275dp</dimen>
 </resources>

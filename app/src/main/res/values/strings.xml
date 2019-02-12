@@ -13,4 +13,5 @@
     <string name="button_carrot">Carrots</string>
     <string name="button_lettuce">Lettuce</string>
     <string name="button_addList">Add To List</string>
+    <string name="select_list">Select List</string>
 </resources>

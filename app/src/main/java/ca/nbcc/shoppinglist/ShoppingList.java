@@ -1,61 +1,76 @@
 package ca.nbcc.shoppinglist;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class ShoppingList {
+public class ShoppingList implements Parcelable{
 
-    public class ListItem {
-        private int count;
-        private String name;
+    private int count;
+    private String name;
 
-        protected int getCount() {
-            return count;
-        }
-
-        protected void setCount(int count) {
-            this.count = count;
-        }
-
-        protected String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public ListItem() {
-        }
-
-        public ListItem(int count, String name) {
-            this.count = count;
-            this.name = name;
-        }
-
+    public int getCount() {
+        return count;
     }
 
-    private ArrayList<ListItem> itemList = new ArrayList();
+    public void setCount(int count) {
+        this.count = count;
+    }
 
-    public void addItem(String name) {
-        boolean itemFound = false;
-        if (!name.isEmpty()) {
-            for (ListItem item : itemList) {
-                if(item.getName().equals(name)){
-                    item.setCount(item.getCount() + 1);
-                    itemFound = true;
-                }
-            }
-            if (itemFound == false){
-                ListItem item = new ListItem(1, name);
-                itemList.add(item);
-            }
+    public String getName() {
+        return name;
+    }
 
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+
+    public ShoppingList(){}
+
+    /**
+     * shopping list constructor
+     * @param count
+     * @param name
+     */
+    public ShoppingList(int count, String name) {
+        this.count = count;
+        this.name = name;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(count);
+        dest.writeString(name);
+    }
+    @Override
+    public int describeContents() {
+        //return 0;
+        return hashCode();
+    }
+
+    public ShoppingList(Parcel in) {
+        count = in.readInt();
+        name = in.readString();
+    }
+
+
+
+    public static final Parcelable.Creator<ShoppingList> CREATOR = new Parcelable.Creator<ShoppingList>() {
+        @Override
+        public ShoppingList createFromParcel(Parcel source) {
+            return new ShoppingList(source);
         }
-    }
 
-    public ArrayList<ListItem> getItems(){
-        return itemList;
-    }
+        @Override
+        public ShoppingList[] newArray(int size) {
+            return new ShoppingList[size];
+        }
+    };
 
+    @Override
+    public String toString(){
+        return this.getCount() + " " + this.getName();
+    }
 }
