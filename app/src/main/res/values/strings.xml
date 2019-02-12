@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Shopping List</string>
+    <string name="shopping_listHeader">Shopping List</string>
+    <string name="shopping_pick_header">Shopping Pick List</string>
+    <string name="button_apples">Apples</string>
+    <string name="button_cheese">Cheese</string>
+    <string name="button_eggs">Eggs</string>
+    <string name="button_milk">Milk</string>
+    <string name="button_banana">Bananas</string>
+    <string name="button_bread">Bread</string>
+    <string name="button_meat">Meat</string>
+    <string name="button_potato">Potatoes</string>
+    <string name="button_carrot">Carrots</string>
+    <string name="button_lettuce">Lettuce</string>
+    <string name="button_addList">Add To List</string>
+    <string name="select_list">Select List</string>
 </resources>
