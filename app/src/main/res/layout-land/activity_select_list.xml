@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectList">
+
+    <TextView
+        android:id="@+id/text_shopPick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/shopping_pick_header"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textSize_header" />
+
+    <Button
+        android:id="@+id/button_apples"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_shopPick"
+        android:layout_margin="@dimen/button_margin_land"
+        android:text="@string/button_apples"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_cheese"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_shopPick"
+        android:layout_margin="@dimen/button_margin_land"
+        android:layout_toEndOf="@id/button_apples"
+        android:text="@string/button_cheese"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_milk"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_shopPick"
+        android:layout_toEndOf="@id/button_cheese"
+        android:layout_margin="@dimen/button_margin_land"
+        android:text="@string/button_milk"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_eggs"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_shopPick"
+        android:layout_margin="@dimen/button_margin_land"
+        android:layout_toEndOf="@id/button_milk"
+        android:text="@string/button_eggs"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_banana"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_apples"
+        android:layout_margin="@dimen/button_margin_land"
+        android:text="@string/button_banana"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_bread"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_cheese"
+        android:layout_margin="@dimen/button_margin_land"
+        android:layout_toEndOf="@id/button_banana"
+        android:text="@string/button_bread"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_meat"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_milk"
+        android:layout_toEndOf="@id/button_bread"
+        android:layout_margin="@dimen/button_margin_land"
+        android:text="@string/button_meat"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_potato"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_banana"
+        android:layout_margin="@dimen/button_margin_land"
+
+        android:text="@string/button_potato"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_carrot"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_bread"
+        android:layout_toEndOf="@id/button_potato"
+        android:layout_margin="@dimen/button_margin_land"
+        android:text="@string/button_carrot"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+
+    <Button
+        android:id="@+id/button_lettuce"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_meat"
+        android:layout_margin="@dimen/button_margin_land"
+        android:layout_toEndOf="@id/button_carrot"
+        android:text="@string/button_lettuce"
+        android:textSize="@dimen/textSize_button"
+        android:onClick="processButton"/>
+</RelativeLayout>
